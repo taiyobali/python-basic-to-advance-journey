@@ -1,0 +1,46 @@
+# class 18: set and frozenset
+# set item unchangeable,possible add and remove item, unordered,
+# don't allow duplicate value, support only immutable type(int,float,complex,bool,tuple,str)
+# for represent set {} or set(())
+data = {54,63,8.99,35.5,True,"Set_type",55,(54,55,69,32)}
+print(type(data))
+print(isinstance(data,set))
+data2 = set((5487,6554,64,55,True))
+print(data2)
+"""
+there are almost 17 methods in set
+copy() add() update() remove() pop() discard() clear() difference() 
+difference_update() intersection() intersection_update()
+isdisjoint() issubset() issuperset() symmetric_difference()
+symmetric_difference_update() union()
+"""
+data3 = data.copy()
+print(data3)
+data.add("artificial")
+print(data)
+data.update("intelligence","ml","data_anal")
+print(data)
+data.remove(55)
+print(data)
+data.pop()
+print(data)
+data.discard(55)
+print(data)
+data3.clear()
+print(data3)
+print(data.difference(data2))
+print(data.difference_update(data2))
+print(data.intersection(data2))
+print(data.intersection_update(data2))
+print(data.isdisjoint(data2))
+print(data.issubset(data2))
+print(data.issuperset(data2))
+print(data.symmetric_difference(data2))
+print(data.symmetric_difference_update(data2))
+print(data.union(data2))
+
+# frozenset immutable,unordered,don't allow duplicate value,frozenset()
+data = {54,63,8.99,35.5,True,"Set_type",55,(54,55,69,32)}
+fro_data = frozenset(data)
+print(fro_data)
+print(type(fro_data))
